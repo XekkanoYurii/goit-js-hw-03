@@ -1,12 +1,12 @@
-function makeArray(firstArray, secondArray, maxLength) {
-    const newArray = firstArray.concat(secondArray);
-    if (newArray.length > maxLength) {
-        return newArray.slice(0, maxLength);
-    } else {
-        return newArray;
+function filterArray(numbers, value) {
+    let filteredArray = [];
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] > value) {
+            filteredArray.push(numbers[i]);
+        }
     }
+    return filteredArray;
 }
-
 console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
 console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
 console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
